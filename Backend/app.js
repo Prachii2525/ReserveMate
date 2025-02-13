@@ -5,7 +5,7 @@ import {dbConnection} from "./database/dbConnection.js";
 import { errorMiddleware } from "./error/error.js";
 
 const app = express ();
-dotenv.config({ path: "./config/config,env"});
+dotenv.config({ path: "./config/config.env"});
 
 app.use(
     cors({
