@@ -9,7 +9,7 @@ export const sendReservation = async (req, res, next) => {
 }
 try{
     await Reservation.create(firstname, lastname, email, phone, date, time);
-    res.status(200),
+    res.status(200).
     json({
         success: true,
         message: "Reservation created successfully",
@@ -23,6 +23,7 @@ catch (error) {
         );
         return next(new ErrorHandler(validationError.join(" , "), 400));
     }
+    return next(error);
 }
 }
    
