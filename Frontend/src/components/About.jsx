@@ -13,13 +13,14 @@ const About = () => {
               <p>The only thing we're serious about is food.</p>
             </div>
             <p className="mid">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Provident possimus optio adipisci dolores impedit illum iusto
-              perferendis, laudantium quod accusamus consequuntur consectetur,
-              tempore nulla error iure reiciendis dolorem assumenda.
-              Necessitatibus fugit asperiores totam rem esse exercitationem
-              iusto ipsum qui dolore ex, accusantium repellat mollitia
-              repellendus.
+              At ReserveMate, we make dining reservations effortless and hassle-free. Whether it’s a romantic date, 
+              a family dinner, or a quick bite with friends, 
+              we connect you with top restaurants in just a few clicks.
+              With real-time availability, instant confirmations, and personalized recommendations,
+              your perfect table is always ready. Say goodbye to long waits and 
+              last-minute chaos—ReserveMate ensures every dining experience is smooth and enjoyable. Book. Dine. Enjoy!
+
+
             </p>
             <Link to={"/"}>
               Explore Menu{" "}

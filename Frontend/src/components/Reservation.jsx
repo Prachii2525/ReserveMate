@@ -18,7 +18,7 @@ const Reservation = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/reservation/send",
+        "http://localhost:4000/api/v1/reservation/send",
         { firstName, lastName, email, phone, date, time },
         {
           headers: {
@@ -36,8 +36,15 @@ const Reservation = () => {
       setDate("");
       navigate("/success");
     } catch (error) {
-      toast.error(error.response.data.message);
+      console.error("Reservation Error:", error);
+      
+      if (error.response && error.response.data) {
+        toast.error(error.response.data.message);
+      } else {
+        toast.error("Something went wrong. Please try again later.");
+      }
     }
+    
   };
 
   return (
