@@ -14,8 +14,7 @@ export const sendReservation = async (req, res, next) => {
     }
 
     try {
-        const newUser = await Reservation.create({ firstName, lastName, email, phone, date, time });
-        console.log(newUser);
+        await Reservation.create({ firstName, lastName, email, phone, date, time });
         res.status(200).json({
             success: true,
             message: "Reservation created successfully",
