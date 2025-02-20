@@ -6,14 +6,12 @@ import { errorMiddleware } from "./error/error.js";
 import ReservationRouter from "./routes/reservationRoute.js";
 
 const app = express();
-dotenv.config({ path: "./config/config.env" });
+dotenv.config({ path: "./.env" });
 
 console.log("🚀 Server is starting...");
 
 // ✅ Debug request body before applying middleware
 app.use((req, res, next) => {
-    console.log("🛠️ Incoming Request - Method:", req.method, "URL:", req.url);
-    console.log("🔍 Raw Request Body Before Parsing:", req.body);
     next();
 });
 
