@@ -166,12 +166,8 @@
                 "id": 5,
                 "title": "RESERVATION",
                 "link": "reservation"
-            },
-            {
-                "id": 6,
-                "title": "OURMENU",
-                "link": "POPULAR DISHES"
             }
+            
         ]
     
     } 

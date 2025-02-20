@@ -2,14 +2,14 @@ import mongoose from "mongoose";
 import validator from "validator";
 
 const reservationSchema = new mongoose.Schema ({
-firstname: {
+firstName: {
     type: String,
     required: true,
     minlength:[3, "First name must contain at least 3 character!"],
     maxlength: [30, "First name cannot exceed 30 character!"],
 
 },
-lastname: {
+lastName: {
     type: String,
     required: true,
     minlength:[3, "First name must contain at least 3 character!"],
@@ -24,8 +24,8 @@ email: {
 phone: {
     type: String,
     required: true,
-    minlength: [11, "Phone number must contain at least 10 digit!"],
-    maxlength: [11, "Phone number cannot exceed 15 digit!"],
+    minlength: [10, "Phone number must contain at least 10 digit!"],
+    maxlength: [15, "Phone number cannot exceed 15 digit!"],
 },
 time: {
     type: String,

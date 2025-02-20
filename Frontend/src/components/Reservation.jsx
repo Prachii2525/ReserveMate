@@ -6,12 +6,12 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 const Reservation = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [firstName, setfirstName] = useState("");
+  const [lastName, setlastName] = useState("");
   const [email, setEmail] = useState("");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
-  const [phone, setPhone] = useState(0);
+  const [phone, setPhone] = useState("");
   const navigate = useNavigate();
 
   const handleReservation = async (e) => {
@@ -28,9 +28,9 @@ const Reservation = () => {
         }
       );
       toast.success(data.message);
-      setFirstName("");
-      setLastName("");
-      setPhone(0);
+      setfirstName("");
+      setlastName("");
+      setPhone("");
       setEmail("");
       setTime("");
       setDate("");
@@ -63,13 +63,13 @@ const Reservation = () => {
                   type="text"
                   placeholder="First Name"
                   value={firstName}
-                  onChange={(e) => setFirstName(e.target.value)}
+                  onChange={(e) => setfirstName(e.target.value)}
                 />
                 <input
                   type="text"
                   placeholder="Last Name"
                   value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
+                  onChange={(e) => setlastName(e.target.value)}
                 />
               </div>
               <div>
