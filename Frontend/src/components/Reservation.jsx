@@ -13,19 +13,15 @@ const Reservation = () => {
   const [time, setTime] = useState("");
   const [phone, setPhone] = useState("");
   const navigate = useNavigate();
+  const API_BASE_URL = "https://reserve-mate-pn.vercel.app/api/v1";
 
   const handleReservation = async (e) => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/api/v1/reservation/send",
+        `${API_BASE_URL}/reservation/send`,
         { firstName, lastName, email, phone, date, time },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          withCredentials: true,
-        }
+        { headers: { "Content-Type": "application/json" }, withCredentials: true }
       );
       toast.success(data.message);
       setfirstName("");
@@ -37,14 +33,14 @@ const Reservation = () => {
       navigate("/success");
     } catch (error) {
       console.error("Reservation Error:", error);
-      
+
       if (error.response && error.response.data) {
         toast.error(error.response.data.message);
       } else {
         toast.error("Something went wrong. Please try again later.");
       }
     }
-    
+
   };
 
   return (
